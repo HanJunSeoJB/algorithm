@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+ int num;
+ char name[20];
+ char* tmp;
+
+ printf("이름 입력: \n");
+ scanf("%s", name);
+ printf("학번 입력: \n");
+ scanf("%d", &num);
+ 
+ for(int i = 0; name[i]; i++) {
+	for(int j = 0; name[i]; j++) {
+	 if(name[i] < name[j]) {
+		tmp = name[i];
+		name[i] = name
+		}
+	}
+  }
+
+}
