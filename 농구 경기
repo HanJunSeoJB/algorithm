@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    int flag = 0;
+    char name[30];
+    char w[150];
+    int alp[26] = { 0, };
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%s", name);
+        w[i] = name[0];
+    }
+    for (int i = 'a'; i <= 'z'; i++) {
+        for (int j = 0; j < n; j++) {
+            if (i == w[j]) {
+                alp[i - 'a']++;
+            }
+        }
+    }
+    for (int i = 0; i < 26; i++) {
+        if (alp[i] >= 5) {
+            printf("%c", i + 'a');
+            flag++;
+        }
+    }
+    if (flag == 0)   printf("PREDAJA");
+    return 0;
+}
