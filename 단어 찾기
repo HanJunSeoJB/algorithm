@@ -1,0 +1,23 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int i = 0;
+    int cnt = 0;
+    FILE* fp;
+    fp = fopen("obama.txt", "rt");
+    char buffer[3000];
+    char* ptr;
+    char* ptstr;
+    while (!feof(fp)) {
+        ptr = fgets(buffer, sizeof(buffer), fp);
+        ptstr = strstr(ptr, "the");
+        if (ptstr != NULL) {
+            cnt++;
+        }
+    }
+    fclose(fp);
+    printf("%d", cnt);
+    return 0;
+}
