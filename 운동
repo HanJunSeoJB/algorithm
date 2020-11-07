@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int cnt = 0;
+    int N, m, M, T, R, X;
+    scanf("%d %d %d %d %d", &N, &m, &M, &T, &R);
+    X = m;
+
+
+    for (int i = 0; i < N;) {
+        cnt++;
+        if (X + T <= M) {
+            i++;
+            X += T;
+        }
+        else
+        {
+            X -= R;
+            if (X < m)   X = m;
+        }
+        if (X + T > M && X == m){
+            printf("-1");
+            return 0;
+        }
+    }
+    printf("%d", cnt);
+    return 0;
+}
