@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+	srand(time(NULL));
+	int n[3];
+	int a[3];
+	int cnt = 0;
+	printf("당첨번호: ");
+	scanf("%d %d %d", &a[0], &a[1], &a[2]);
+
+	printf("\n로또를 계속 사는 중입니다....\n");
+	while (1) {
+		for (int i = 0; i < 3; i++) {
+			n[i] = (rand() % 20) + 1;
+			
+		}
+		
+		if (a[0] == n[0] && a[1] == n[1] && a[2] == n[2]) {
+			break;
+		}
+		cnt++;
+		
+	}
+	printf("%d번째 로또에서 당첨되셨습니다", cnt);
+	return 0;
+}

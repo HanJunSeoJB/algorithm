@@ -1,0 +1,30 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include <string.h>
+
+int main()
+{
+    int i = 0;
+    int cnt = 0;
+    int a[20];
+    char num[20];
+    fgets(num, 20, stdin);
+    char* ptr = strtok(num, " ");
+
+    while (ptr != NULL) {
+        a[i] = atoi(ptr);
+        ptr = strtok(NULL, " ");
+        i++;
+        cnt++;
+    }
+    printf("결과:\n");
+
+    for (int i = 0; i < cnt; i++) {
+        printf("%d: ", a[i]);
+        for (int j = 0; j < a[i]; j++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+    return 0;
+}

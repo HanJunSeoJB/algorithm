@@ -1,0 +1,8 @@
+color_list = ["black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"]
+a = color_list.index(input())
+b = color_list.index(input())
+c = color_list.index(input())
+
+result = (10*int(str(a)) + int(str(b))) * (10**c)
+print(result)
+    
