@@ -1,4 +1,5 @@
 #뮤터블 시퀸스 원소를 역순으로 정렬
+#안녕하세용
 from typing import Any, MutableSequence
 
 def reverse_array(a: MutableSequence):
